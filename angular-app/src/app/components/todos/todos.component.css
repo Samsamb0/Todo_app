@@ -1,8 +1,14 @@
-.delete {
+.todo.done .content {
+  color: green;
+  text-decoration: line-through;
+}
+
+button.delete {
   color: white;
   background-color: rgb(94, 91, 91);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   border-radius: 5px;
+  text-decoration: none;
 }
 .todo {
   display: flex;
@@ -14,4 +20,34 @@
 
 .todo .content {
   flex: 1 1 100%;
+}
+
+.todo-input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  appearance: none;
+  border: none;
+  background-color: #f3f3f3;
+  margin-top: 15px;
+  font-size: 20px;
+  outline: none;
+}
+
+.todo-submit {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+
+  background-color: #fe4880;
+  color: #fff;
+  margin: 15px auto;
+
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 700;
 }

@@ -24,6 +24,13 @@ export class TodosComponent {
       },
     ];
   }
+  done(id: number) {
+    this.todos.map((v, i) => {
+      if (i == id) v.completed = !v.completed;
+
+      return v;
+    });
+  }
 }
 interface Todo {
   content: string;
