@@ -31,6 +31,10 @@ export class TodosComponent {
       return v;
     });
   }
+
+  delete(id: number) {
+    this.todos = this.todos.filter((v, i) => i !== id);
+  }
 }
 interface Todo {
   content: string;

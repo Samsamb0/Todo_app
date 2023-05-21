@@ -5,6 +5,6 @@
   >
     <div class="index">{{ i }}.</div>
     <div class="content" (click)="done(i)">{{ todo.content }}</div>
-    <button class="delete">Remove</button>
+    <button class="delete" (click)="delete(i)">Remove</button>
   </div>
 </div>
