@@ -3,16 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TodosComponent } from './components/todos/todos.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [
-    AppComponent,
-    TodosComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, TodosComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

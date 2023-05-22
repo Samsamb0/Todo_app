@@ -7,12 +7,8 @@ import { Component } from '@angular/core';
 })
 export class TodosComponent {
   todos: Todo[];
-
+  inputTodo: string = '';
   constructor() {
-    this.todos = new Array();
-  }
-
-  ngOnInit() {
     this.todos = [
       {
         content: 'First todo',
@@ -24,6 +20,8 @@ export class TodosComponent {
       },
     ];
   }
+
+  ngOnInit() {}
   done(id: number) {
     this.todos.map((v, i) => {
       if (i == id) v.completed = !v.completed;
@@ -34,6 +32,15 @@ export class TodosComponent {
 
   delete(id: number) {
     this.todos = this.todos.filter((v, i) => i !== id);
+  }
+
+  add() {
+    this.todos.push({
+      content: this.inputTodo,
+      completed: false,
+    });
+
+    this.inputTodo = '';
   }
 }
 interface Todo {
